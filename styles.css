@@ -1,0 +1,60 @@
+
+:root { --maxw: 960px; }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f7f5f2;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.25rem;
+  line-height: 1.6;
+}
+
+nav {
+  display: block;
+  margin-bottom: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 700px) {
+  .columns { grid-template-columns: 1fr; }
+}
+
+dl { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; }
+dt { font-weight: 700; }
+dd { margin: 0 0 .5rem 0; }
+
+footer {
+  margin-top: 2rem;
+  font-size: .9rem;
+  color: #444;
+}
